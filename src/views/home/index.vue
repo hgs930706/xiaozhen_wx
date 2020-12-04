@@ -2,8 +2,8 @@
  * @Author: ShenYuQiang
  * @Date: 2020-11-23 22:37:28
  * @LastEditors: ShenYuQiang
- * @LastEditTime: 2020-12-02 20:35:38
- * @FilePath: \h5ysxz\src\views\home\index.vue
+ * @LastEditTime: 2020-12-03 22:26:19
+ * @FilePath: \新建文件夹\src\views\home\index.vue
 -->
 <template>
   <div id="home">
@@ -25,7 +25,7 @@
           <van-image :src="Icon02" />
           <span class="itemStyle">预约报名</span>
         </van-grid-item>
-        <van-grid-item >
+        <van-grid-item :to="`/view/home/detail/${6}?title=配套展示`">
           <van-image :src="Icon03" />
           <span class="itemStyle">配套展示</span>
         </van-grid-item>
@@ -33,7 +33,7 @@
           <van-image :src="Icon04" />
           <span class="itemStyle">入驻企业</span>
         </van-grid-item>
-        <van-grid-item >
+        <van-grid-item  :to="`/view/home/detail/${5}?title=一件智慧游`" >
           <van-image :src="Icon05" />
           <span class="itemStyle">一件智慧游</span>
         </van-grid-item>

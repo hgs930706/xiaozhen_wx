@@ -3,13 +3,14 @@
  * @Author: ShenYuQiang
  * @Date: 2020-11-27 20:00:12
  * @LastEditors: ShenYuQiang
- * @LastEditTime: 2020-12-02 22:49:28
- * @FilePath: \h5ysxz\src\config\request.js
+ * @LastEditTime: 2020-12-03 22:33:51
+ * @FilePath: \新建文件夹\src\config\request.js
  */
 
 import axios from 'axios'
 import router from '../router/index'
 
+// const baseUrl = 'http://192.168.31.27:8081'
 const baseUrl = '/'
 const timeOut = 5 * 1000
 
@@ -35,13 +36,15 @@ $axios.interceptors.request.use(
 
 $axios.interceptors.response.use(
   (response) => {
-    if (response.status === 401) {
-      router.push('/login')
-    }
+    // if (response.status === 401) {
+    //   router.push('/login')
+    // }
     return response.data
   },
   (error) => {
-    console.log(error, 'error111')
+    if (error.response.status === 403) {
+      router.push('/login')
+    }
     return Promise.reject(error)
   }
 )

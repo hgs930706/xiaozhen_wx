@@ -2,8 +2,8 @@
  * @Author: ShenYuQiang
  * @Date: 2020-11-26 15:16:31
  * @LastEditors: ShenYuQiang
- * @LastEditTime: 2020-11-26 16:07:11
- * @FilePath: \h5ysxz\src\views\home\viewDetail.vue
+ * @LastEditTime: 2020-12-03 22:24:49
+ * @FilePath: \新建文件夹\src\views\home\viewDetail.vue
 -->
 <template>
     <div class="viewDetail">
@@ -13,7 +13,7 @@
          :title="title"
          :fixed="true"
          z-index="999" />
-        <h4>{{title}}</h4>
+        <h4>敬请期待...</h4>
     </div>
 </template>
 <script>

@@ -2,8 +2,8 @@
  * @Author: ShenYuQiang
  * @Date: 2020-11-24 23:54:26
  * @LastEditors: ShenYuQiang
- * @LastEditTime: 2020-12-03 01:08:56
- * @FilePath: \h5ysxz\src\views\home\components\z-cart.vue
+ * @LastEditTime: 2020-12-03 22:31:40
+ * @FilePath: \新建文件夹\src\views\home\components\z-cart.vue
 -->
 <template>
    <div class="z-cart">
@@ -54,6 +54,10 @@ export default {
       }
       if (this.id === '3') {
         this.$router.push({ path: '/view/home/enterprise' })
+      }
+      // /view/home/detail/${6}?title=配套展示
+      if (this.id === '2') {
+        this.$router.push({ path: `/view/home/detail/${this.id}`, query: { title: this.title } })
       }
       // this.$router.push({ path: `/view/home/detail/:${id}`, query: { title: this.title } })
     }
